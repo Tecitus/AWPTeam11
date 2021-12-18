@@ -1,0 +1,35 @@
+doctype
+html
+  head
+    title SiteName
+    meta(charset='utf-8')
+    meta(name='viewport', content='width=device-width, initial-scale=1, shrink-to-fit=no, user-scalable=no')
+    link(rel='stylesheet', href='/public/stylesheets/default.css')
+    script var windowid = '#{windowid}'; if (!window[windowid]) window[windowid] = {};
+    block headscripts
+        script(id="googlemapsscript",type="text/javascript", src="https://maps.googleapis.com/maps/api/js?key="+api+"&language="+ lang)
+        script(src='https://cdn.jsdelivr.net/npm/js-cookie@3.0.1/dist/js.cookie.min.js')
+        script(src='/public/javascripts/utils.js')
+        script(src='/public/javascripts/lodash.js')
+        script(src='/public/javascripts/socket.io.dev.js')
+        script(src='/public/javascripts/socketiopromise.js')
+        script(src='/public/javascripts/session.js')
+        script(src='/public/javascripts/socketio.js')
+        script(src='/public/javascripts/i18next.js')
+        script(src='/public/javascripts/prescript.js')
+        script(src='/public/javascripts/modalwindow.js')
+        script(src='/public/javascripts/component.js')
+        script(src='/public/javascripts/registercomponent.js')
+        script(src='/public/javascripts/threadcomponent.js')
+        script(src='/public/javascripts/rightthreadcomponent.js')
+  body
+    block header
+    block content
+    block rightthread
+  tail
+    block tailscripts
+
+        script(src='/public/javascripts/detectlanguage.js')
+        script(src='/public/javascripts/headercomponent.js')
+        script(src='/public/javascripts/pagecomponent.js')
+        script(src='/public/javascripts/postscript.js')

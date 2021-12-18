@@ -1,0 +1,12 @@
+db.mmd
+googlemapsapikey.txt
+package-lock.json
+selfsigned.crt
+selfsigned.key
+server.crt
+server.csr
+server.key
+server.key.default
+config.json
+node_modules
+.theia/*

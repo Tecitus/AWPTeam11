@@ -1,0 +1,64 @@
+doctype
+html(lang=lang)
+    head
+        title SiteName
+        meta(charset='utf-8')
+        meta(name='viewport', content='width=device-width, initial-scale=1, shrink-to-fit=no')
+        link(rel='stylesheet', href='public/stylesheets/default.css')
+        script var windowid = '#{windowid}'; if (!window[windowid]) window[windowid] = {};
+        script(src='https://cdn.jsdelivr.net/npm/js-cookie@3.0.1/dist/js.cookie.min.js')
+        script(src='/public/javascripts/utils.js')
+        script(src='/public/javascripts/lodash.js')
+        script(src='/public/javascripts/socket.io.dev.js')
+        script(src='/public/javascripts/socketiopromise.js')
+        script(src='/public/javascripts/session.js')
+        script(src='/public/javascripts/socketio.js')
+        script(src='/public/javascripts/i18next.js')
+        script(src='/public/javascripts/prescript.js')
+        script(src='/public/javascripts/modalwindow.js')
+        script(src='/public/javascripts/component.js')
+        script(src='/public/javascripts/registercomponent.js')
+        script(src='/public/javascripts/threadcomponent.js')
+        script(src='/public/javascripts/rightthreadcomponent.js')
+        script(src="/public/javascripts/listercomponent.js")
+        script(src="/public/javascripts/selectorcomponent.js")
+        script(src="/public/javascripts/admin/adminsession.js")
+        script(src="/public/javascripts/admin/adminmainpage.js")
+        script(src="/public/javascripts/admin/adminpagespage.js")
+        script(src="/public/javascripts/admin/adminrolepage.js")
+        script(src="/public/javascripts/admin/adminuserpage.js")
+        script(src="/public/javascripts/admin/adminserverpage.js")
+        script(src="/public/javascripts/admin/adminleftsidemenu.js")
+        script(src="/public/javascripts/admin/adminonload.js")
+
+        block headscripts
+            
+    body
+        if header
+            block header
+                div.header
+                    a(href='/admin')
+                        i18nstr SiteName
+                    a(href='/')
+                        i18nstr Returntoregularpage
+                    div.headerloggedin
+                        span #{account.nickname}
+                        a(href="/logout") 
+                            i18nstr Logout
+        block leftsidemenu
+            div.adminleftsidemenu
+        block content
+            div.content
+                div.AdminMainPage
+        if rightsidemenu
+            block rightsidemenu
+                div.adminrightsidemenu
+        if footer
+            block footer
+                footer
+    tail
+        block tailscripts
+            script(src='/public/javascripts/detectlanguage.js')
+            script(src='/public/javascripts/headercomponent.js')
+            script(src='/public/javascripts/pagecomponent.js')
+            script(src='/public/javascripts/postscript.js')
